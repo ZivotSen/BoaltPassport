@@ -55,10 +55,11 @@ Route::prefix('/yelp')->group(function() {
      * Available routes after businesses tag
      * /search                       // Search for businesses by keyword, category, location, price level, etc.
      * /search/phone                 // Search for businesses by phone number.
-     * /{transaction_type}/search    // Search for businesses which support food delivery transactions.
      * /{alias}                      // Get rich business data, such as name, address, phone number, photos, Yelp rating, etc...
      * /matches                      // Find the Yelp business that matches an exact input location. Use this to match business data from other sources with Yelp businesses.
      * /{alias}/reviews              // Get up to three review excerpts for a business.
+     *
+     * Transactions route is not available yet
      * */
     Route::post('/businesses/{any}', array(
         'as' => 'api_yelp_business',
